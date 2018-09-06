@@ -6,5 +6,10 @@ pipeline {
         echo 'test'
       }
     }
+    stage('') {
+      steps {
+        archiveArtifacts(fingerprint: true, artifacts: '**/*')
+      }
+    }
   }
 }
